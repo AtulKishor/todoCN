@@ -55,6 +55,7 @@ const todosSlice = createSlice({
     .addCase(addTodosAsync.fulfilled, (state, action) => {
       state.status = action.payload.data;
       console.log(state.status);
+      alert('Added new Todo Successfully.')
     })    
     .addCase(addTodosAsync.rejected, (state, action) => {
       state.status = "Failed to add todos.";
@@ -64,6 +65,7 @@ const todosSlice = createSlice({
     .addCase(updateTodosAsync.fulfilled, (state, action) => {
       state.status = action.payload;      
       console.log(state.status);
+      alert('Updated Todo Successfully.')
     })    
     .addCase(updateTodosAsync.rejected, (state, action) => {
       state.status = "Failed to update todos.";
@@ -73,6 +75,7 @@ const todosSlice = createSlice({
     .addCase(deleteTodosAsync.fulfilled, (state, action) => {
       state.status = action.payload;
       console.log(state.status);
+      alert('Deleted Todo Successfully.')
     })    
     .addCase(deleteTodosAsync.rejected, (state, action) => {
       state.status = "Failed to delete todos.";
