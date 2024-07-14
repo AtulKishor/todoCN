@@ -26,7 +26,7 @@ const TodoList = () => {
   
   return (
     <div className="todoList">
-    {todos.slice(3,12).map(({id, title, completed}) => (
+    {todos.map(({id, title, completed}) => (
       <div className={completed? "todoItem done" : "todoItem notDone"} key={id}>
           <p>{title}</p>
           <div className='listBtn'>
