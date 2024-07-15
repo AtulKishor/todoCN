@@ -8,6 +8,10 @@ import { todosSelector, loading, setUpdateData, setInputText, toggleIsUpdate, cl
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
+// for toast notifications
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const TodoList = () => {
   const {todos, isLoading, error} = useSelector(todosSelector);
   const dispatch = useDispatch();
@@ -15,6 +19,7 @@ const TodoList = () => {
   useEffect(()=>{
     dispatch(loading());
     dispatch(getTodosAsync());
+    toast.success('Fetched All Todos Successfully.');
   },[]);
 
   if (isLoading){
@@ -38,9 +43,9 @@ const TodoList = () => {
                   <EditIcon />
               </button>
               <button onClick={()=>{
-                dispatch(deleteTodosAsync(id));
-                console.log(id+" deleted!");                
+                dispatch(deleteTodosAsync(id));          
                 dispatch(clearStatus());
+                toast.success('Deleted Todo Successfully.');
                 }}>
                   <Delete />
               </button>

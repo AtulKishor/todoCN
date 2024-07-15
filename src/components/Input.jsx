@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodosAsync, updateTodosAsync, todosSelector, setInputText, toggleIsUpdate, setUpdateData, clearStatus } 
 from "../redux/reducers/todoReducer";
+// for toast notifications
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // material UIs
 import EditIcon from '@mui/icons-material/Edit';
@@ -20,8 +23,10 @@ const Input = () => {
       dispatch(updateTodosAsync({...updateData, title: inpText}));
       dispatch(toggleIsUpdate(false));
       dispatch(setUpdateData(null));
+      toast.success('Updated Todo Successfully.');
     } else {
-      dispatch(addTodosAsync({ id: Math.floor(Math.random()*10000) , title: inpText, completed: false }));
+      dispatch(addTodosAsync({ id: Math.floor(Math.random()*10000) , title: inpText, isCompleted: false }));
+      toast.success('Added new Todo Successfully.');
     }
     dispatch(setInputText(""));
     dispatch(clearStatus());

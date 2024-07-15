@@ -70,18 +70,18 @@ Check out the live demo [here](https://todocn.onrender.com/).
 
 ## API Integration
 
-Fetch todos: GET https://jsonplaceholder.typicode.com/todos
-Add todo: POST https://jsonplaceholder.typicode.com/todos
-Update todo: PUT https://jsonplaceholder.typicode.com/todos/:id
-Delete todo: DELETE https://jsonplaceholder.typicode.com/todos/:id
+Fetch todos: GET https://jsonplaceholder.typicode.com/todos  
+Add todo: POST https://jsonplaceholder.typicode.com/todos  
+Update todo: PUT https://jsonplaceholder.typicode.com/todos/:id  
+Delete todo: DELETE https://jsonplaceholder.typicode.com/todos/:id  
 
 ## About
 
-Reducers: Defined using Redux Toolkit with createSlice and createAsyncThunk.
-Components: Separated into individual files for better maintainability.
-State Management: Handled with Redux, making use of async actions for API calls.
-Styling: Basic CSS styling applied.
-Error Handling: Basic error handling for async actions in the reducer.
+Reducers: Defined using Redux Toolkit with createSlice and createAsyncThunk.  
+Components: Separated into individual files for better maintainability.  
+State Management: Handled with Redux, making use of async actions for API calls.  
+Styling: Basic CSS styling applied.  
+Error Handling: Basic error handling for async actions in the reducer.  
 
 ## Contributing
 
@@ -92,6 +92,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
  - Commit your Changes (git commit -m 'Add some AmazingFeature')
  - Push to the Branch (git push origin feature/AmazingFeature)
  - Open a Pull Request
-
-## Refernces
-Note Keeper App: https://3gs559.csb.app/
